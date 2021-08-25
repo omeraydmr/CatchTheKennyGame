@@ -3,6 +3,7 @@ package com.omeraydmr.catchthekenny;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.TextView;
 
@@ -21,6 +22,19 @@ public class MainActivity extends AppCompatActivity {
         timer = (TextView) findViewById(R.id.timer);
         scoreBoard = (TextView) findViewById(R.id.scoreBoard);
         score = 0;
+
+        new CountDownTimer(10000,1000) {
+
+            @Override
+            public void onTick(long millisUntilFinish) {
+                timer.setText("Time : "+ millisUntilFinish/1000);
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        }.start();
 
     }
 
