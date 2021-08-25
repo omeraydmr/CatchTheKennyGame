@@ -29,19 +29,10 @@
             app:srcCompat="@drawable/kenny" />
 
         <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
-            app:layout_column="1"
-            app:layout_row="0"
-            android:onClick="increaseScore"
-            app:srcCompat="@drawable/kenny" />
-
-        <ImageView
             android:id="@+id/imageView2"
             android:layout_width="100dp"
             android:layout_height="120dp"
-            app:layout_column="2"
+            app:layout_column="1"
             app:layout_row="0"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/kenny" />
@@ -50,8 +41,8 @@
             android:id="@+id/imageView3"
             android:layout_width="100dp"
             android:layout_height="120dp"
-            app:layout_column="0"
-            app:layout_row="1"
+            app:layout_column="2"
+            app:layout_row="0"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/kenny" />
 
@@ -59,7 +50,7 @@
             android:id="@+id/imageView4"
             android:layout_width="100dp"
             android:layout_height="120dp"
-            app:layout_column="1"
+            app:layout_column="0"
             app:layout_row="1"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/kenny" />
@@ -68,7 +59,7 @@
             android:id="@+id/imageView5"
             android:layout_width="100dp"
             android:layout_height="120dp"
-            app:layout_column="2"
+            app:layout_column="1"
             app:layout_row="1"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/kenny" />
@@ -77,13 +68,22 @@
             android:id="@+id/imageView6"
             android:layout_width="100dp"
             android:layout_height="120dp"
+            app:layout_column="2"
+            app:layout_row="1"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/kenny" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
             app:layout_column="0"
             app:layout_row="2"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/kenny" />
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/imageView8"
             android:layout_width="100dp"
             android:layout_height="120dp"
             app:layout_column="1"
@@ -92,7 +92,7 @@
             app:srcCompat="@drawable/kenny" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/imageView9"
             android:layout_width="100dp"
             android:layout_height="120dp"
             app:layout_column="2"
