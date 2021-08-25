@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
     ImageView imageView8;
     ImageView imageView9;
     ImageView[] imageArray;
+
+    Handler handler;
+    Runnable runnable;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         imageArray = new ImageView[] {imageView, imageView2, imageView3, imageView4, imageView5, imageView6, imageView7, imageView8, imageView9};
 
         hideImages();
+
 
         score = 0;
 
@@ -70,8 +78,23 @@ public class MainActivity extends AppCompatActivity {
 
     public void hideImages() {
 
-        for(ImageView image : imageArray) {
-            image.setVisibility(View.INVISIBLE);
-        }
+        handler = new Handler();
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                for(ImageView image : imageArray) {
+                    image.setVisibility(View.INVISIBLE);
+                }
+
+                Random random = new Random();
+                int i = random.nextInt(9);
+                imageArray[i].setVisibility(View.VISIBLE);
+
+                handler.postDelayed(this, 500);
+            }
+        };
+
+        handler.post(runnable);
+
     }
 }
